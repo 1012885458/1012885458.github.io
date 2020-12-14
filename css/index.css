@@ -1,0 +1,139 @@
+*{margin: 0px;padding: 0px;}
+.content{width: 1024px;margin: 20px  auto 0px;text-align: center;}
+.header{text-shadow:4px 4px 4px #aaa;opacity: "1";}
+#subTitle{margin-top: 5px; }
+.subContent{font-family: "Arial ","宋体";text-align: center;
+color: #666;margin: 40px auto; font-weight: bolder;
+max-width: 20em;line-height: 40px;text-shadow: 4px 4px 4px #aaa;}
+
+
+
+.portal_animate{text-align: center;
+position: relative;
+width: 100%;
+margin: 3em auto;
+max-width: 30em;}
+
+
+.mainWeb{
+width: 100%;
+text-decoration:none;
+font-size:40px;
+ margin-top:4em; 
+ position: relative;
+ z-index: 5;
+ 
+/* position:absolute;
+top:4em;
+left:0px; */
+text-shadow: 4px 8px 4px #aaa;
+background-color: transparent;
+border-radius: 50%;
+display:inline-block;今天用做了一个导航效果，用到了hover样式，就是鼠标移上去导航背景变别的颜色，可是在Google Chrome浏览器中，把鼠标移到导航上不显示效果，背景无变化，最终在网上找到了解决方法，拿来做个备忘。 
+
+原因就是，在Google Chrome浏览器下，
+如果a:hover状态中有设置display:block的话，
+那么这个hover状态就失效了，真是悲剧啊
+，所以要想Google Chrome浏览器显示hover的效果，
+只需要删除display:block就好了。 */
+}
+a{		
+	 transition: 0.3s ease-in-out;z-index:9999;
+}
+#center{z-index:99999;}
+
+
+a:link{color:yellow;border-bottom: rgba(20,20,20,1) dotted 0.05em;
+				
+}
+
+#mainWeb:hover{ color:blue;cursor: pointer;}
+
+.portal_animate img{
+	width:100% ;
+	position: absolute;
+left: 0px;
+top: 0px;
+display: block;
+animation: portal-loop 1s linear infinite;
+will-change:transform;
+	
+/*animation:animation-name,animation-duration,animation-timing-function
+检索或者设置对象动画的过渡类型:ease(平滑过渡,等同于贝塞尔曲线（(0.25,0.1,0.25,1),linear线性过渡(0.0,0.0,1.0,1.0),ease-in由慢到快（(0.42,0,1.0,1.0),ease-out由快到慢（(0,0,0.58,1.0),ease-in-out由慢到快再到慢（(0.42,0,0.58,1.0),
+step-start等同于step(1,start),step-end等同于steps(1,end),steps(<integer>,<end/start>
+第一个参数必须为正整数,第二个可以为end或者start,
+),cubic-bezier(<number>,<number>,<number>,<number>特定的贝塞尔曲线,4个数值在0-1之间)
+)
+
+*/
+}
+
+@keyframes portal-loop {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.portal-circle:nth-child(1){
+	animation-duration: 30s;
+}
+.portal-circle:nth-child(2){
+	animation-duration: 40s;
+}
+.portal-circle:nth-child(3){
+	animation-duration: 50s;
+}
+.portal-circle:nth-child(4){
+	animation-duration: 60s;
+}
+.portal-circle:nth-child(5){
+	animation-duration: 70s;
+}
+.portal-circle:nth-child(6){
+	animation-duration: 80s;
+}
+.portal-circle:nth-child(7){
+	animation-duration: 90s;
+}
+.portal-circle:nth-child(8){
+	animation-duration: 100s;
+}
+.portal-circle:nth-child(9){
+	animation-duration: 110s;
+}
+.portal-circle:nth-child(10){
+	animation-duration: 120s;
+}
+
+object,embed{            
+    -webkit-animation-duration:.001s;
+	-webkit-animation-name:playerInserted;
+	-ms-animation-duration:.001s;
+	-ms-animation-name:playerInserted;               
+	 -o-animation-duration:.001s;
+	 -o-animation-name:playerInserted;               
+	  animation-duration:.001s;
+	  animation-name:playerInserted;}               
+	@-webkit-keyframes playerInserted{
+		from{opacity:0.99;}to{opacity:1;}}               
+		 @-ms-keyframes playerInserted{
+			 from{opacity:0.99;}to{opacity:1;}}                
+	@-o-keyframes playerInserted{
+		from{opacity:0.99;}to{opacity:1;}}                
+	@keyframes playerInserted{
+		from{opacity:0.99;}to{opacity:1;}}
+		
+		.interstitial-wrapper{
+			box-sizing:border-box;margin:0 auto;max-width:600px}
+		.runner-container{width:44px}
+		.runner-canvas,.runner-container{
+			height:150px;max-width:600px;overflow:hidden}
+		.runner-canvas{opacity:1;position:relative;z-index:2}
+		.inverted{
+		transition:-webkit-filter 1.5s cubic-bezier(.65,.05,.36,1)
+		,background-color 1.5s cubic-bezier(.65,.05,.36,1);
+		will-change:-webkit-filter,background-color;
+		-webkit-filter:invert(100%);background-color:#000}
+		.controller{background:hsla(0,0%,97%,.1);height:100vh;
+	left:0;position:absolute;top:0;width:100vw;z-index:1}
+	    #offline-resources{display:none}
+		
